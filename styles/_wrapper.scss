@@ -1,0 +1,22 @@
+.wrapper {
+    @extend %wrapper;
+    @extend %width;
+
+    &__heading {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 80px;
+    }
+
+    &__items {
+        @extend %flex-row;
+    }
+
+    &__item {
+        max-width: 166px;
+    }
+}
+
+.icon {
+    max-height: 80px;
+}

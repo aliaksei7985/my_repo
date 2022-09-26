@@ -1,0 +1,24 @@
+.container {
+    @extend %container;
+
+    &__heading {
+        margin-bottom: 65px;
+    }
+
+    &__item {
+        margin: 0 auto 45px auto;
+    }
+
+    &__card {
+        @extend %width;
+        margin: 0 auto 100px auto;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        margin-bottom: 45px;
+    }
+
+}

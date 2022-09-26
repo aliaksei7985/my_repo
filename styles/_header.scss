@@ -1,0 +1,160 @@
+.header {
+    @extend %wrapper;
+    @extend %width;
+    margin-bottom: 104px;
+    padding: 0;
+}
+
+.burger {
+    display: none;
+    @extend %wrapper;
+    padding: 0;
+    @extend %width;
+    text-align: start;
+    position: relative;
+
+    &__list{
+        margin: 35px 0 31px 0;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 0 0 68px 0;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: #828282;
+        font-weight: 700;
+        font-size: 34px;
+
+        &:hover,
+        &:active {
+            color: #070707;
+        }
+
+        &--active {
+            color: #000;
+        }
+    }
+}
+
+.nav {
+    border-bottom: 1px solid #828282;
+    margin-bottom: 40px;
+
+    &__list{
+    @extend %flex-row;
+
+        margin: 35px 0 31px 0;
+
+        list-style: none;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: #828282;
+        font-weight: 700;
+
+        &:hover,
+        &:active {
+            color: #070707;
+        }
+
+        &--active {
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .burger {
+        display: block;
+        height: 100vh;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .lang {
+        display: none;
+    }
+}
+
+.headings {
+    @extend %flex-row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    text-align: start;
+
+    &__primary {
+        font-size: 47.3392px;
+        font-weight: 700;
+        width: 3em;
+        margin: 0;
+    }
+
+    &__secondary {
+        margin-top: 23px;
+    }
+}
+
+.lang {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    width: 90px;
+
+    &__item {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: #828282;
+
+        &--active {
+            color: #000;
+        }
+    }
+
+    &__item:first-child::after {
+        content: '';
+        display: inline-block;
+        margin-top: 5px;
+        width: 1em;
+        height: 2px;
+        position: relative;
+        right: 0.1em;
+        background-color: black;
+    }
+}
+
+.langAdaptive {
+    position: absolute;
+    bottom: 95px;
+    right: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    width: 90px;
+
+    &__item {
+        text-decoration: none;
+        font-size: 34px;
+        font-weight: 700;
+        color: #828282;
+
+        &--active {
+            color: #000;
+        }
+    }
+
+    &__item:first-child::after {
+        content: '';
+        display: inline-block;
+        margin-top: 5px;
+        width: 1em;
+        height: 2px;
+        position: relative;
+        right: 0.1em;
+        background-color: black;
+    }
+}
