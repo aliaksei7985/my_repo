@@ -105,7 +105,7 @@
   color: #000;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 425px) {
   .burger {
     display: block;
     height: 100vh;
@@ -125,7 +125,6 @@
 .headings__primary {
   font-size: 47.3392px;
   font-weight: 700;
-  width: 3em;
   margin: 0;
 }
 .headings__secondary {
